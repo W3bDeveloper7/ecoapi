@@ -12,9 +12,10 @@ class ExerciseController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id)
     {
         //
+        return response()->json(Exercise::all()->where('program_id', $id), 200);
     }
 
     /**
